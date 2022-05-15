@@ -10,7 +10,7 @@ namespace learningCsharp5
     {
         private string num1;
         private string num2;
-        private string sum;
+        private string result;
         public string Num1
         {
             get { return num1; }
@@ -20,6 +20,7 @@ namespace learningCsharp5
                 bool res = int.TryParse(value, out number);
                 if (res) num1 = value;
                 onPropertyChanged("Num1");
+                onPropertyChanged("Result");
             }
         }
         public string Num2
@@ -27,13 +28,14 @@ namespace learningCsharp5
             get { return num2; }
             set
             {
-                int number;
-                bool res = int.TryParse(value, out number);
+                int number2;
+                bool res = int.TryParse(value, out number2);
                 if (res) num2 = value;
                 onPropertyChanged("Num2");
+                onPropertyChanged("Result");
             }
         }
-        public string Sum
+        public string Result
         {
             get
             {
@@ -43,7 +45,7 @@ namespace learningCsharp5
             set
             {
                 int res = int.Parse(Num1) + int.Parse(Num2);
-                sum = res.ToString();
+                result = res.ToString();
                 onPropertyChanged("Result");
             }
         }
