@@ -8,7 +8,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <!-- Buttons -->
+        <!-- Buttons | Change to number boxes-->
         <Button Grid.Column="0">
             <Button.Style>
                 <Style TargetType="Button">

@@ -20,9 +20,12 @@ namespace learningCsharp5
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Addition SumObj { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            SumObj = new Addition { Num1 = "1", Num2 = "3" };
+            this.DataContext = SumObj;
             MyTextBox.Text = MySlider.Value.ToString();
         }
     }
